@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #d3e8f5;
+}
+.main{
+    width: 80%;
+    min-height: 80%;
+    padding: 2% 2%;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;  left: 50%;
+    display: grid;
+    grid-template-columns: 4fr 6fr; /* butonların uzunlukları */ 
+    
+}
+/* Left Side (Sliders and Checkboxs) */
+
+.slidersBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.slidersBox label{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: purple;
+    font-weight: 600;
+}
+.slidersBox input[type="range"]{
+    display: block;
+    width: 100%;
+    background: #FF7043;
+}
+
+
+.flip-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.flip-line{
+    margin-top: 2%;
+}
+
+/* Right Side (Button and Photo) */
+.photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; /* Boşluk ayarlama */
+}
+#chosen-image{
+    display: block;
+    margin: auto;
+    max-width: 50vmin;
+    max-height: 50vmin;
+}
+.image-container{
+    display: none;
+    
+}
+input[type="file"]{
+    display: none;
+}
+.photo label , .save-img{
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    width: 65%;
+    height: 7%;
+    background-color: purple;
+    color: #ffffff;
+    padding: 3% 0%;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+    .photo label, .save-img {
+     font-size: 1em;
+  }
+  .slidersBox label {
+    font-size: 1.2em;
+  }
+}
